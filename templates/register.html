@@ -1,0 +1,64 @@
+
+
+{% extends 'base.html' %}
+
+{% block title %}
+Регицтрация
+{% endblock %}
+
+{% block content %}
+
+
+<main class="form-signin w-100 m-auto">
+  <form>
+    <img class="mb-4" src="{{ url_for('static', filename='img/lapa6.png')}}" alt="" width="72" height="57">
+    <h1 class="h3 mb-3 fw-normal">Добро пожаловать</h1>
+
+
+
+    <div class="form-floating">
+      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+      <label for="floatingInput">Введите логин</label>
+
+
+    <div class="sandvpn-logo" style="background-image: url(&quot;moz-extension://fd59b8a8-0009-42b1-85bb-0f0235798745/logo192.png&quot;) !important; background-size: 22px 22px !important; cursor: pointer !important; width: 22px !important; height: 22px !important; position: absolute !important; padding: 0px !important; margin-top: auto !important; z-index: 2 !important; animation-name: none; top: 18px !important; left: 264px !important;"></div></div>
+    <div class="form-floating">
+        <input type="text" class="form-control" id="floatingName" placeholder="name@example.com">
+        <label for="floatingInput">Введите имя</label>
+    </div>
+
+    <div class="form-floating">
+        <input type="email" class="form-control" id="floatingMail" placeholder="name@example.com">
+        <label for="floatingInput">Введите почту</label>
+    </div>
+
+      <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
+      <label for="floatingPassword">Введите пароль</label>
+    </div>
+
+
+    <div class="form-floating">
+      <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
+      <label for="floatingPassword">Введите пароль снова</label>
+    </div>
+
+
+
+
+
+    <div class="form-check text-start my-3">
+      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
+      <label class="form-check-label" for="flexCheckDefault">
+        Запомнить меня
+      </label>
+    </div>
+    <button class="btn btn-primary w-100 py-2" type="submit">Зарегистрироваться</button>
+    <p class="mt-5 mb-3 text-body-secondary"><a href="{{ url_for('login')}}">У вас уже есть аккаунт?</a></p>
+  </form>
+</main>
+
+
+
+
+{% endblock %}

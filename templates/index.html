@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+<body class="custom_bc">
+
+
+<div class="intro-block__content">
+	<div class="intro-block__title intro-block__title_index" style="color: #fff; max-width: 640px;"><b class="Zoo">Zoo Market<br>— заботимься о питомце вместе!<br>все для вашего питомца</b></div>
+		<button class="btn btn-primary btn-lg" style="margin-top: 40px; background-color: #e18695 " type="button">Подробнее</button>
+
+	</div>
+
+</div>
+
+
+
+<!--Second part site-->
+<div class="index-join">
+        <div class="wrap">
+            <div class="half-block index-join__half-block">
+                <div class="half-block__col">
+                    <h2 class="index-join__title">Помочь питомцу <br>и сделать мир лучше</h2>
+                </div>
+                <div class="half-block__col index-join__right">
+                    <p class="index-join__text"><a href="#">Зарегистрируйтесь на сайте</a>, получите пошаговые инструкции по помощи питомцам на разные случаи жизни и доступ к нашей библиотеке полезных статей и контактов</p>
+					<a href="#" class="underlined-link index-join__link">Спасти питомца</a>
+					<img src="{{ url_for('static', filename='img/kabo2.jpg') }}" class="index-join__img">
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+<!--shop-->
+
+
+
+</body>
+
+{% endblock %}
+
