@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Страница кабинета
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <h1 class="mt-5">Добро пожаловать в ваш кабинет!</h1>
+    <p>Вы успешно вошли в систему.</p>
+    <p>Здесь вы можете управлять своими данными, просматривать заказы и многое другое.</p>
+
+    <a href="{{ url_for('index') }}" class="btn btn-primary">На главную</a>
+    <a href="{{ url_for('cotolog') }}" class="btn btn-secondary">Перейти в Котолог</a>
+    <a href="{{ url_for('about') }}" class="btn btn-info">О нас</a>
+</div>
+{% endblock %}

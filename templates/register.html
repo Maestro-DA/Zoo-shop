@@ -3,60 +3,287 @@
 {% extends 'base.html' %}
 
 {% block title %}
-Регицтрация
+Регистрация
 {% endblock %}
 
 {% block content %}
 
 
-<main class="form-signin w-100 m-auto">
-  <form>
-    <img class="mb-4" src="{{ url_for('static', filename='img/lapa6.png')}}" alt="" width="72" height="57">
-    <h1 class="h3 mb-3 fw-normal">Добро пожаловать</h1>
+<!--<main class="form-signin w-100 m-auto">-->
+<!--  <form method="post" action="{{ url_for('register') }}">-->
+<!--    <img class="mb-4" src="{{ url_for('static', filename='img/new123&#45;&#45;1.png')}}" alt="" width="72" height="57">-->
+<!--    <h1 class="h3 mb-3 fw-normal">Добро пожаловать</h1>-->
 
 
 
-    <div class="form-floating">
-      <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
-      <label for="floatingInput">Введите логин</label>
+<!--    <div class="form-floating">-->
+<!--      <input type="text" class="form-control" id="username" name="username" placeholder="name@example.com">-->
+<!--      <label for="floatingInput">Введите логин</label>-->
 
 
-    <div class="sandvpn-logo" style="background-image: url(&quot;moz-extension://fd59b8a8-0009-42b1-85bb-0f0235798745/logo192.png&quot;) !important; background-size: 22px 22px !important; cursor: pointer !important; width: 22px !important; height: 22px !important; position: absolute !important; padding: 0px !important; margin-top: auto !important; z-index: 2 !important; animation-name: none; top: 18px !important; left: 264px !important;"></div></div>
-    <div class="form-floating">
-        <input type="text" class="form-control" id="floatingName" placeholder="name@example.com">
-        <label for="floatingInput">Введите имя</label>
+<!--    <div class="sandvpn-logo" style=" !important; background-size: 22px 22px !important; cursor: pointer !important; width: 22px !important; height: 22px !important; position: absolute !important; padding: 0px !important; margin-top: auto !important; z-index: 2 !important; animation-name: none; top: 18px !important; left: 264px !important;"></div></div>-->
+<!--    <div class="form-floating">-->
+<!--        <input type="text" class="form-control" id="name" name="name" placeholder="name@example.com">-->
+<!--        <label for="floatingInput">Введите имя</label>-->
+<!--    </div>-->
+
+<!--    <div class="form-floating">-->
+<!--        <input type="email" class="form-control" id="email" name="email"   placeholder="name@example.com">-->
+<!--        <label for="floatingInput">Введите почту</label>-->
+<!--    </div>-->
+
+<!--      <div class="form-floating">-->
+<!--      <input type="password" class="form-control" id="password" name="password" placeholder="Password">-->
+<!--      <label for="floatingPassword">Введите пароль</label>-->
+<!--    </div>-->
+
+
+<!--    <div class="form-floating">-->
+<!--      <input type="password" class="form-control" id="password_confirm"  name="password_confirm" placeholder="Password">-->
+<!--      <label for="floatingPassword">Введите пароль снова</label>-->
+<!--    </div>-->
+
+
+
+
+
+
+<!--    <button class="btn btn-primary w-100 py-2" type="submit">Зарегистрироваться</button>-->
+<!--    <p class="mt-5 mb-3 text-body-secondary"><a href="{{ url_for('login')}}">У вас уже есть аккаунт?</a></p>-->
+<!--  </form>-->
+<!--</main>-->
+
+
+
+
+
+<!--f-->
+
+<div class="intro" style="margin-top: -30px">
+    <div class="video">
+        <video class="video__media" src="/static/img/kabo.mp4" autoplay muted loop></video>
     </div>
+    <div class="intro__content">
+        <div class="container1">
+            <div class="wrapper">
+              <form method="post" action="{{ url_for('register') }}">
+                    <h1>Региcтрация</h1>
+<!--                      Login-->
+                  <div class="input-box">
+                        <input type="text" id="username" name="username" placeholder="Введите логин">
+                        <i class="fa-solid fa-user" style="position: absolute; right: 20px; top: 30%; transform: translate(-50%); font-size: 20px;"></i>
+                    </div>
+<!--                  Имя-->
+                  <div class="input-box">
+                        <input type="text" placeholder="Введите имя" id="name" name="name">
+<!--                        <i class="fa-solid fa-user" style="position: absolute; right: 20px; top: 30%; transform: translate(-50%); font-size: 20px;"></i>-->
+                    </div>
 
-    <div class="form-floating">
-        <input type="email" class="form-control" id="floatingMail" placeholder="name@example.com">
-        <label for="floatingInput">Введите почту</label>
+<!--                  Почта-->
+                  <div class="input-box">
+                        <input type="email" id="email" name="email" placeholder="Введите почту">
+<!--                        <i class="fa-solid fa-user" style="position: absolute; right: 20px; top: 30%; transform: translate(-50%); font-size: 20px;"></i>-->
+                    </div>
+
+
+
+<!--                    Pass-->
+                    <div class="input-box">
+                        <input type="password" placeholder="Введите пароль" id="password" name="password">
+                        <i class="fa-solid fa-lock" style="position: absolute; right: 20px; top: 30%; transform: translate(-50%); font-size: 20px;"></i>
+                    </div>
+<!--                  Second Pass-->
+                  <div class="input-box">
+                        <input type="password" placeholder="Введите пароль снова" id="password_confirm"  name="password_confirm">
+                        <i class="fa-solid fa-lock" style="position: absolute; right: 20px; top: 30%; transform: translate(-50%); font-size: 20px;"></i>
+                    </div>
+
+
+                    <button type="submit" class="btn">Создать аккаунт</button>
+                    <div class="register-link">
+                        <p>Уже есть аккаунт? <a href="{{ url_for('login') }}">Войти в аккаунт</a></p>
+                    </div>
+                </form>
+            </div>
+        </div>
     </div>
-
-      <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword" placeholder="Password">
-      <label for="floatingPassword">Введите пароль</label>
-    </div>
-
-
-    <div class="form-floating">
-      <input type="password" class="form-control" id="floatingPassword2" placeholder="Password">
-      <label for="floatingPassword">Введите пароль снова</label>
-    </div>
+</div>
 
 
 
+<style>
+  .intro {
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    /*background: url("cover.jpg") center no-repeat;*/
+    /*background-size: cover;*/
+}
+
+.intro:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /*background-color: rgba(0, 0, 0, .2);*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.intro__title {
+    margin: 0;
+
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+}
+
+.container1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+
+.video__media {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 
-    <div class="form-check text-start my-3">
-      <input class="form-check-input" type="checkbox" value="remember-me" id="flexCheckDefault">
-      <label class="form-check-label" for="flexCheckDefault">
-        Запомнить меня
-      </label>
-    </div>
-    <button class="btn btn-primary w-100 py-2" type="submit">Зарегистрироваться</button>
-    <p class="mt-5 mb-3 text-body-secondary"><a href="{{ url_for('login')}}">У вас уже есть аккаунт?</a></p>
-  </form>
-</main>
+.wrapper{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin-left: 420px;
+
+}
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #fff;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
+
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

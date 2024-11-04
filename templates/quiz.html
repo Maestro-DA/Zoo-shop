@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+{% block title %}
+Тест
+{% endblock %}
+
+{% block content %}
+<body>
+    <div class="container">
+        <h1 class="text-center mt-5">Какой питомец подходит мне?</h1>
+        <p class="text-center">Ответьте на несколько вопросов, чтобы узнать, какой питомец лучше всего подходит вашему образу жизни.</p>
+        <div class="row mt-4">
+            <!-- Левая колонка с формой -->
+            <div class="col-md-6">
+                <form action="/quiz" method="POST">
+                    <!-- Вопрос 1 -->
+                    <div class="form-group">
+                        <label for="activity-level">Насколько вы активны?</label>
+                        <select class="form-control custom-select" name="activity-level" id="activity-level" required>
+                            <option value="" disabled selected>Выберите вариант</option>
+                            <option value="high">Очень активен (люблю активный отдых)</option>
+                            <option value="medium">Умеренно активен (иногда гуляю)</option>
+                            <option value="low">Не очень активен (предпочитаю отдых дома)</option>
+                        </select>
+                    </div>
+
+                    <!-- Вопрос 2 -->
+                    <div class="form-group">
+                        <label for="space-available">Какая у вас жилая площадь?</label>
+                        <select class="form-control custom-select" name="space-available" id="space-available" required>
+                            <option value="" disabled selected>Выберите вариант</option>
+                            <option value="large">Большой дом с двором</option>
+                            <option value="medium">Квартира с небольшим балконом</option>
+                            <option value="small">Маленькая квартира или студия</option>
+                        </select>
+                    </div>
+
+                    <!-- Вопрос 3 -->
+                    <div class="form-group">
+                        <label for="allergies">Есть ли у вас аллергия на шерсть?</label>
+                        <select class="form-control custom-select" name="allergies" id="allergies" required>
+                            <option value="" disabled selected>Выберите вариант</option>
+                            <option value="yes">Да, есть аллергия</option>
+                            <option value="no">Нет, аллергии нет</option>
+                        </select>
+                    </div>
+
+                    <!-- Вопрос 4 -->
+                    <div class="form-group">
+                        <label for="time-available">Сколько времени вы можете уделять питомцу ежедневно?</label>
+                        <select class="form-control custom-select" name="time-available" id="time-available" required>
+                            <option value="" disabled selected>Выберите вариант</option>
+                            <option value="a-lot">Много (больше 2 часов)</option>
+                            <option value="moderate">Умеренно (1-2 часа)</option>
+                            <option value="little">Мало (меньше 1 часа)</option>
+                        </select>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary mt-4 w-100">Узнать моего идеального питомец</button>
+                </form>
+            </div>
+
+            <!-- Правая колонка с изображением -->
+            <div class="col-md-6 d-flex align-items-center justify-content-center">
+                <img src="{{ url_for('static', filename='img/heart.gif') }}" alt="Изображение" class="img-fluid rounded" style="max-height: 400px;">
+            </div>
+        </div>
+    </div>
+</body>
+
+<style>
+    body {
+        /*background-color: #f8f9fa;*/
+        /*background-color: wheat;*/
+    }
+
+    .container {
+        /*background-color: #ffffff;*/
+
+        padding: 2rem;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-top: 50px;
+    }
+
+    h1 {
+        color: #4b6993;
+    }
+
+    .form-group label {
+        font-weight: bold;
+        color: #343a40;
+    }
+
+</style>
+{% endblock %}
+
+

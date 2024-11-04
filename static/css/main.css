@@ -3,6 +3,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&family=Roboto+Slab:wght@100..900&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
 
+/*Этот шрифт для логотипа*/
+@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Lemon&family=Luckiest+Guy&display=swap');
 
 
 body {
@@ -40,12 +44,36 @@ header {
 
     z-index: 1000;
     /*background-color: #182628;*/
-    background-color: #501F3A;
+    /*background-color: #501F3A;*/
+    /*background-color: #605959;*/
+    background-color: white;
+
+    /*background-color: rgba(80, 31, 58, 0.5); !* Полупрозрачный фон *!*/
+    /*background-color: rgb(245, 245, 220);*/
+    /*background-color: rgb(152, 251, 152);*/
+    /*background-color: rgb(192, 192, 192);*/
+    /*background-color: rgb(255, 223, 130);*/
+
+
+
+    /*-webkit-box-shadow: white;*/
     -webkit-box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     box-shadow: 0 5px 25px rgba(0, 0, 0, 0.15);
     font-size: 18px;
 
 }
+
+.logo_head{
+    font-size: 30px;
+    padding-left: 15px;
+    text-decoration: none;
+      /*font-family: "Luckiest Guy", cursive;*/
+    font-family: "Lemon", serif;
+  font-weight: 400;
+  font-style: normal
+}
+
+
 a{
     color:black;
 }
@@ -63,7 +91,8 @@ a{
 
 
 .nav .nav-link {
-    color: #14A098; /* Меняем цвет текста */
+    /*color: #14A098; !* Меняем цвет текста *!*/
+    color: black;
 }
 
 
@@ -72,20 +101,31 @@ a{
     color: #57BA98; /* Цвет текста при наведении */
 }
 
+
+
 .btn-primary {
     /*background-color: #14A098;*/
-    background-color: black;
-    background: #501F3A;
-    color: white;
+    /*background-color: black;*/
+    /*background: #501F3A;*/
+    color: black;
+
     border-color: white;
+    background: transparent; /* Прозраный фон*/
+
+    background-color: #383838;
+    color: white;
+
 }
+
 .btn-primary:hover{
-    background-color: black;
+    background-color: #383838;;
     border-color: black;
 }
 
 .btn-outline-primary {
-    background-color: #0F292F;
+    /*background-color: #0F292F;*/
+    background-color: #383838;;
+
     border-color: #0F292F;
 
     color: white;
@@ -97,10 +137,13 @@ a{
 }
 
 
+
+
+
 /* header */
 .header_img {
     height: 48px;
-    width: 48px;
+    width: 64px;
 }
 
 
@@ -132,8 +175,7 @@ a{
 /*    border-bottom: 40px;*/
 /*}*/
 
-
-
+/*boots*/
 
 
 
@@ -164,6 +206,7 @@ a{
   z-index: 0;
 }
 .half-block {
+  padding-top: 90px;
   display: flex;
   justify-content: space-between;
 }
@@ -181,8 +224,9 @@ a{
   width: calc(50% - 20px);
 }
 .index-join__text {
-  font-size: 22px;
-  line-height: 28px;
+  padding-top: 15px;
+  font-size: 35px;
+  line-height: 38px;
   font-family: 'SuisseIntlMedium';
   font-weight: 500;
   color: #000;
@@ -207,7 +251,7 @@ p {
   letter-spacing: -0.012em;
 }
 .index-join__img {
-  position: absolute;
+  /*position: absolute;*/
   right: -90px;
   bottom: 15px;
   z-index: -1;
@@ -220,6 +264,9 @@ img {
   color: #000;
 }
 
+.index-join__title{
+    font-size: 52px;
+}
 
 
 
@@ -231,12 +278,16 @@ img {
 
 
 
+/*Booking*/
 
 
 
 
 
-/*cotolog.html*/
+
+
+
+/*shop.html*/
 
 
 
@@ -367,6 +418,11 @@ button.add-to-cart:hover {
 
 
 
+
+/*Test ot*/
+.form-group {
+    padding-bottom: 15px; /* Отступы вниз*/
+}
 
 
 
@@ -569,10 +625,6 @@ button.add-to-cart:hover {
 
 
 
-
-
-
-
 /*Beta*/
 
 
@@ -592,6 +644,78 @@ button.add-to-cart:hover {
 
 
 
+/*about*/
+
+.custom_bc2{
+    background-image: url("/static/img/kabo3.jpg");
+    background-size: cover; /* Масштабирует изображение, чтобы заполнить весь экран */
+    background-position: center; /* Центрирует изображение */
+    background-repeat: no-repeat; /* Предотвращает повторение изображения */
+    background-attachment: fixed; /* Фиксирует фон при прокрутке */
+    color: #17252A;
+}
+
+.text-center {
+  text-align: center !important;
+}
+
+.cover-container {
+  max-width: 42em;
+}
+.p-3 {
+  padding: 1rem !important;
+}
+.mx-auto {
+  margin-right: auto !important;
+  margin-left: auto !important;
+}
+.flex-column {
+  flex-direction: column !important;
+}
+.h-100 {
+  height: 100% !important;
+}
+.w-100 {
+  width: 100% !important;
+}
+.d-flex {
+  display: flex !important;
+}
+
+.about_h1{
+    padding-top: 40px;
+    padding-bottom: 14px;
+    font-size: 40px;
+    color: #fff;
+}
+.lead{
+    font-size: 25px;
+    color: #fff;
+    margin-bottom: 325px;
+}
+/*second part of about*/
+
+
+
+.map{
+
+    background-image: url("static/img/kabo6.jpg");
+    margin-left: 65px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*end of about*/
 
 /*login*/
 
@@ -629,33 +753,37 @@ button.add-to-cart:hover {
 
 
 
+/*Reviews*/
 
-
-
-
-
-
-/*footer*/
-.social_media{
-    height: 24px;
-    width: 24px;
+.custom_bc3{
+    background-image: url("/static/img/kabo10.jpg");
+    background-size: cover; /* Масштабирует изображение, чтобы заполнить весь экран */
+    /*background-position: center; !* Центрирует изображение *!*/
+    background-position: revert ;
+    background-repeat: no-repeat; /* Предотвращает повторение изображения */
+    background-attachment: fixed; /* Фиксирует фон при прокрутке */
 }
 
 
-footer{
-    padding: 20px;
-    background-image: url('/static/img/изображение.png'); /* путь к вашему изображению */
-    background-repeat: no-repeat; /* отключаем повторение */
-    background-size: contain; /* изображение будет масштабироваться, чтобы поместиться в футер */
-    background-position: center; /* выравниваем по центру */
-    }
-.page{
-    /*overflow: hidden;*/
-    /*display: flex;*/
-    /*flex-direction: column;*/
-    min-height: 100vh;
+
+
+
+
+
+
+/* Основной конт футера */
+.contact-info {
+    margin-top: 15px; /* Отступ сверху для разделения заголовка и контактов */
 }
 
-footer{
-    background-color: white;
+/* Настройка иконок */
+.contact-info i {
+    margin-right: 5px; /* Отступ между иконкой и текстом */
 }
+
+
+
+
+
+
+
