@@ -1,0 +1,227 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Личный кабинет
+{% endblock %}
+
+{% block content %}
+
+<!--<div class="container" style="background: url('/static/img/kabo.mp4')" xmlns="http://www.w3.org/1999/html">-->
+<!--    <h1 class="mt-5">Личный кабинет</h1>-->
+<!--    <form method="POST">-->
+<!--        <div class="mb-3">-->
+<!--            <label for="name" class="form-label">Имя</label>-->
+<!--            <input type="text" class="form-control" id="name" name="name" value="{{ user.name }}" required>-->
+<!--            </div>-->
+<!--        <div class="mb-3">-->
+<!--            <label for="email" class="form-label">Электронная почта</label>-->
+<!--            <input type="email" class="form-control" id="email" name="email" value="{{ user.email }}" required>-->
+<!--        </div>-->
+<!--        <button type="submit" class="btn btn-primary">Сохранить изменения</button>-->
+<!--    </form>-->
+<!--    <a href="{{ url_for('logout') }}" class="btn btn-danger mt-3">Выйти</a>-->
+<!--&lt;!&ndash;    <img src="/static/img/kabo22.jpg" alt="">&ndash;&gt;-->
+<!--</div>-->
+
+
+
+
+<!--g-->
+
+<div class="intro" style="margin-top: -30px">
+    <div class="video">
+        <video class="video__media" src="/static/img/kabo.mp4" autoplay muted loop></video>
+    </div>
+    <div class="intro__content">
+        <div class="container1">
+            <div class="wrapper">
+                <form method="POST">
+                    <h1>Личный кабинет</h1>
+                    <div class="input-box">
+                        <input type="text" id="name" name="name" value="{{ user.name }}" required>
+                        <i class="fa-solid fa-user" style="position: absolute; right: 20px; top: 30%; transform: translate(-50%); font-size: 20px;"></i>
+                    </div>
+                    <div class="input-box">
+                        <input type="email" id="email" name="email" value="{{ user.email }}" required>
+                        <i class="fa-solid fa-envelope" style="position: absolute; right: 20px; top: 30%; transform: translate(-50%); font-size: 20px;"></i>
+                    </div>
+
+                    <button type="submit" class="btn" style="background-color: #8cd122">Сохранить изменения</button>
+                </form>
+
+                <a href="{{ url_for('logout') }}" class="btn btn-danger mt-3" style="background: #f2f2f2;">Выйти</a>
+
+                <!-- Удалить акк -->
+                <form method="POST" onsubmit="return confirm('Вы уверены, что хотите удалить аккаунт?');">
+                    <input type="hidden" name="delete_account">
+                    <button type="submit" class="btn btn-danger mt-3" style="background-color: #ff4d4d;">Удалить аккаунт</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<style>
+
+  .intro {
+    max-height: 100vh;
+    overflow: hidden;
+    position: relative;
+
+    /*background: url("cover.jpg") center no-repeat;*/
+    /*background-size: cover;*/
+}
+
+.intro:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+
+    /*background-color: rgba(0, 0, 0, .2);*/
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
+}
+
+.intro__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+}
+
+.intro__title {
+    margin: 0;
+
+    font-size: 45px;
+    color: #fff;
+    text-align: center;
+}
+
+.container1 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 56.25%;
+}
+
+.video__media {
+    width: 100%;
+    height: auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.wrapper{
+  width: 420px;
+  background: transparent;
+  border: 2px solid rgba(255, 255, 255, .2);
+  backdrop-filter: blur(9px);
+  color: #fff;
+  border-radius: 12px;
+  padding: 30px 40px;
+  margin-left: 420px;
+
+}
+.wrapper h1{
+  font-size: 36px;
+  text-align: center;
+}
+.wrapper .input-box{
+  position: relative;
+  width: 100%;
+  height: 50px;
+
+  margin: 30px 0;
+}
+.input-box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  border: 2px solid rgba(255, 255, 255, .2);
+  border-radius: 40px;
+  font-size: 16px;
+  color: #fff;
+  padding: 20px 45px 20px 20px;
+}
+.input-box input::placeholder{
+  color: #fff;
+}
+.input-box i{
+  position: absolute;
+  right: 20px;
+  top: 30%;
+  transform: translate(-50%);
+  font-size: 20px;
+
+}
+.wrapper .remember-forgot{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14.5px;
+  margin: -15px 0 15px;
+}
+.remember-forgot label input{
+  accent-color: #fff;
+  margin-right: 3px;
+
+}
+.remember-forgot a{
+  color: #fff;
+  text-decoration: none;
+
+}
+.remember-forgot a:hover{
+  text-decoration: underline;
+}
+.wrapper .btn{
+  width: 100%;
+  height: 45px;
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 40px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .1);
+  cursor: pointer;
+  font-size: 16px;
+  color: #333;
+  font-weight: 600;
+}
+.wrapper .register-link{
+  font-size: 14.5px;
+  text-align: center;
+  margin: 20px 0 15px;
+
+}
+.register-link p a{
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+}
+.register-link p a:hover{
+  text-decoration: underline;
+}
+</style>
+{% endblock %}

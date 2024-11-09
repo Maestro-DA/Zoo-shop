@@ -1,0 +1,164 @@
+{% extends 'base.html' %}
+{% block title %}
+Главная страница
+{% endblock %}
+
+{% block content %}
+
+
+<style>
+.sld {
+  background-color: #ef9aa9;
+}
+
+/* Container styling */
+.slider {
+  position: relative;
+  width: 100%;
+  margin: auto;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+/* Slides styling */
+.slides {
+  display: flex;
+  transition: transform 1s ease;
+  animation: slide-animation 15s infinite;
+}
+
+.slide {
+  flex: 0 0 100%;
+  background-size: contain; /* Сохраняет пропорции изображения */
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 470px;
+}
+
+/* Individual slides */
+.slide1 { background-image: url("/static/img/banner/as.jpg"); }
+.slide2 { background-image: url("/static/img/banner/sale2.png"); }
+
+    /* Auto-play animation */
+@keyframes slide-animation {
+    0% { transform: translateX(0%); }
+    50% { transform: translateX(0%); }
+    55% { transform: translateX(-100%); }
+    100% { transform: translateX(-100%); }
+    }
+
+/* Navigation dots */
+.navigation {
+  text-align: center;
+  position: absolute;
+  bottom: 15px;
+  width: 100%;
+}
+
+.navigation label {
+  cursor: pointer;
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  background: #ddd;
+  border-radius: 50%;
+}
+
+.navigation label:hover {
+  background: #666;
+}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<body class="custom_bc">
+
+
+<div class="intro-block__content" style="padding-bottom: 250px">
+	<div class="intro-block__title intro-block__title_index" style="color: #fff; max-width: 640px;-"><b class="Zoo">Zoo world<br>— заботимся о питомце вместе!<br>все для вашего питомца</b></div>
+		<button class="btn btn-primary btn-lg" style="margin-top: 40px; background-color: #e18695; color: white" type="button"><a href="{{ url_for('shop')}}" style="text-decoration: none; color: white">Подробнее</a></button>
+
+	</div>
+
+</div>
+
+
+
+<!--Second part site-->
+<div class="index-join">
+        <div class="wrap">
+            <div class="half-block index-join__half-block">
+                <div class="half-block__col">
+                    <h2 class="index-join__title">Задумываетесь о питомце?<br>Мы поможем!</h2>
+                    <p class="index-join__text">Пройти наш тест на сайте, чтобы узнать какой питомец вам больше подходит</p>
+                    <button class="btn btn-primary btn-lg" style="background-color: #F8F39E; border-color: black; color: black" type="button";><a href="{{ url_for('quiz')}}" style="text-decoration: none">Пройти тест </a></button>
+
+                </div>
+                <div class="half-block__col index-join__right">
+<!--                    <p class="index-join__text"><a href="{{ url_for('quiz')}}">Пройти наш тест на сайте</a>, чтобы узнать какой питомец вам больше подходит</p>-->
+<!--					<a href="{{ url_for('quiz')}}" class="underlined-link index-join__link">Пройти тест</a>-->
+					<img src="{{ url_for('static', filename='img/kabo2.jpg') }}" class="index-join__img">
+                </div>
+            </div>
+        </div>
+</div>
+
+
+
+
+
+<!--Gallery-->
+
+
+<div class="sld">
+<div class="slider">
+    <div class="slides">
+      <div class="slide slide1"></div>
+      <div class="slide slide2"></div>
+<!--      <div class="slide slide3"></div>-->
+<!--      <div class="slide slide4"></div>-->
+<!--      <div class="slide slide5"></div>-->
+    </div>
+
+    <div class="navigation">
+      <label for="slide1"></label>
+      <label for="slide2"></label>
+<!--      <label for="slide3"></label>-->
+<!--      <label for="slide4"></label>-->
+<!--      <label for="slide5"></label>-->
+    </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+</body>
+
+{% endblock %}
+

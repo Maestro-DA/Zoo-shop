@@ -1,0 +1,20 @@
+
+{% extends 'base.html' %}
+{% block title %}
+Результаты
+{% endblock %}
+
+{% block content %}
+
+
+ <div class="container">
+        <h1 class="text-center mt-5">Ваш идеальный питомец</h1>
+        <p class="text-center mt-4">{{ suggestion }}</p>
+        <div class="text-center mt-5">
+            <img src="{{ image_url }}" alt="Питомец" class="img-fluid" style="max-width: 300px;">
+        </div>
+        <div class="text-center mt-5" style="padding-bottom: 50px">
+            <a href="/quiz" class="btn btn-primary">Пройти тест заново</a>
+        </div>
+    </div>
+{% endblock %}

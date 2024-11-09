@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Отзывы
+{% endblock %}
+
+{% block content %}
+<body class="custom_bc3" style="color: #330066">
+
+<div class="container">
+    <h1 class="mt-5">Отзывы</h1>
+
+    {% if session['user_id'] %}
+        <form method="POST" class="mb-5">
+            <div class="mb-3">
+                <label for="content" class="form-label">Ваш отзыв</label>
+                <textarea style="background-color: rgba(157, 189, 228);" class="form-control" id="content" name="content" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Отправить отзыв</button>
+        </form>
+    {% else %}
+        <p>Пожалуйста, <a href="{{ url_for('login') }}">войдите</a>, чтобы оставить отзыв.</p>
+    {% endif %}
+
+    <hr>
+
+    <div class="reviews-list">
+        {% for review in reviews %}
+            <div class="review-item mb-4">
+                <p><strong>{{ review.user.username }}</strong> ({{ review.date_created.strftime('%Y-%m-%d %H:%M') }})</p>
+                <p>{{ review.content }}</p>
+            </div>
+<!--            <hr>-->
+        {% else %}
+            <p>Пока отзывов нет. Будьте первым, кто оставит отзыв!</p>
+        {% endfor %}
+    </div>
+</div>
+
+</body>
+{% endblock %}
