@@ -785,5 +785,20 @@ button.add-to-cart:hover {
 
 
 
+.nav-link {
+    color: black; /* Цвет кнопок по умолчанию */
+    text-decoration: none;
+}
 
+.nav-link.active {
+    color: gray; /* Серый цвет для активной кнопки */
+    font-weight: bold; /* Выделение жирным */
+}
+
+.nav-link:hover {
+    color: darkgray; /* Цвет при наведении */
+}
+.nav-link {
+    color
+}
 

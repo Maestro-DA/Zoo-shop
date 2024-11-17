@@ -29,13 +29,16 @@
     </div>
 
     <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-        <li><a href="{{ url_for('index')}}" class="nav-link px-2 link-secondary"><b>Главная</b></a></li>
-        <li><a href="{{ url_for('shop')}}" class="nav-link px-2"><b>Котолог</b></a></li>
-        <li><a href="{{ url_for('booking')}}" class="nav-link px-2"><b>Пропажи</b></a></li>
-        <li><a href="{{ url_for('quiz')}}" class="nav-link px-2"><b>Тест</b></a></li>
-        <li><a href="{{ url_for('reviews') }}" class="nav-link px-2"><b>Отзывы</b></a></li>
-        <li><a href="{{ url_for('about')}}" class="nav-link px-2"><b>О нас</b></a></li>
-    </ul>
+    <li><a href="{{ url_for('index') }}" class="nav-link px-2 {% if request.endpoint == 'index' %}link-secondary active{% else %}{% endif %}"><b>Главная</b></a></li>
+    <li><a href="{{ url_for('shop') }}" class="nav-link px-2 {% if request.endpoint == 'shop' %}link-secondary active{% else %}{% endif %}"><b>Котолог</b></a></li>
+    <li><a href="{{ url_for('booking') }}" class="nav-link px-2 {% if request.endpoint == 'booking' %}link-secondary active{% else %}{% endif %}"><b>Учебник</b></a></li>
+    <li><a href="{{ url_for('quiz') }}" class="nav-link px-2 {% if request.endpoint == 'quiz' %}link-secondary active{% else %}{% endif %}"><b>Тест</b></a></li>
+    <li><a href="{{ url_for('reviews') }}" class="nav-link px-2 {% if request.endpoint == 'reviews' %}link-secondary active{% else %}{% endif %}"><b>Отзывы</b></a></li>
+    <li><a href="{{ url_for('about') }}" class="nav-link px-2 {% if request.endpoint == 'about' %}link-secondary active{% else %}{% endif %}"><b>О нас</b></a></li>
+</ul>
+
+
+
 
     <div class="col-md-3 text-end">
         {% if session.get('user_id') %}
